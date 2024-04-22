@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html>
+
+<%- include('../partials/head'); %>
+
+<body class="is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper" class="fade-in">
+
+		<!-- Intro -->
+		<div id="intro">
+			<h1>
+				<%= titulo %>
+			</h1>
+			<p>
+				<%= subtitulo %>
+			</p>
+			<ul class="actions">
+				<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+			</ul>
+		</div>
+
+		<!-- Header -->
+		<header id="header">
+			<a href="index.html" class="logo">
+				<%= titulo %>
+			</a>
+		</header>
+
+		<!-- Nav -->
+		<%- include('../partials/nav'); %>
+
+		<!-- Main -->
+		<div id="main">
+
+			<!-- Featured Post -->
+			<article class="post featured">
+				<header class="major">
+					<span class="date">
+						<%= fecha_actual %>
+					</span>
+					<h2><a href="#">And this is a<br />
+							massive headline</a></h2>
+					<p>Aenean ornare velit lacus varius enim ullamcorper proin aliquam<br />
+						facilisis ante sed etiam magna interdum congue. Lorem ipsum dolor<br />
+						amet nullam sed etiam veroeros.</p>
+				</header>
+				<a href="#" class="image main"><img src="images/pic01.jpg" alt="" /></a>
+				<ul class="actions special">
+					<li><a href="#" class="button large">Full Story</a></li>
+				</ul>
+			</article>
+
+			<!-- Posts -->
+			<section class="posts">
+				<% items.forEach(function(item){ %>
+					<article>
+						<header>
+							<span class="date">
+								<%= item.date %>
+							</span>
+							<h2>
+								<%= item.nombre %>
+							</h2>
+						</header>
+						<a href="#" class="image fit"><img src="images/pic02.jpg" alt="" /></a>
+						<p>
+							<%= item.descripcion %>
+						</p>
+						<ul class="actions special">
+							<li><a href="/detalle/<%= item.id%>" class="button">Full Story</a></li>
+						</ul>
+					</article>
+					<% }); %>
+			</section>
+
+			<!-- Footer -->
+			<footer>
+				<div class="pagination">
+					<!--<a href="#" class="previous">Prev</a>-->
+					<a href="#" class="page active">1</a>
+					<a href="#" class="page">2</a>
+					<a href="#" class="page">3</a>
+					<span class="extra">&hellip;</span>
+					<a href="#" class="page">8</a>
+					<a href="#" class="page">9</a>
+					<a href="#" class="page">10</a>
+					<a href="#" class="next">Next</a>
+				</div>
+			</footer>
+
+		</div>
+
+		<!-- Footer -->
+		<%- include('../partials/contacto'); %>
+
+		<!-- Copyright -->
+		<div id="copyright">
+			<ul>
+				<li>&copy; Untitled</li>
+				<li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+			</ul>
+		</div>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
